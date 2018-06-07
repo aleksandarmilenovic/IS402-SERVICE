@@ -19,11 +19,11 @@ public class PolitikaPrevencijeUdesa {
     private String prinvipi_delovanja;
 
     @Column(unique = false)
-    private int datum;
+    private long datum;
 
     public PolitikaPrevencijeUdesa(){}
 
-    public PolitikaPrevencijeUdesa(String ciljevi, String prinvipi_delovanja, int datum) {
+    public PolitikaPrevencijeUdesa(String ciljevi, String prinvipi_delovanja, long datum) {
         this.ciljevi = ciljevi;
         this.prinvipi_delovanja = prinvipi_delovanja;
         this.datum = datum;
@@ -53,11 +53,11 @@ public class PolitikaPrevencijeUdesa {
         this.prinvipi_delovanja = prinvipi_delovanja;
     }
 
-    public int getDatum() {
+    public long getDatum() {
         return datum;
     }
 
-    public void setDatum(int datum) {
+    public void setDatum(long datum) {
         this.datum = datum;
     }
 }

@@ -15,8 +15,8 @@ public class IzvestajBezbednostiIPlanZastiteOdUdesa {
     @NotBlank
     private  String informacije_o_upravl_i_organizacije_u_cilju_sprecavanja;
 
-    @Column(nullable = false)
-    private int id_lokacije;
+    @NotBlank
+    private String id_lokacije;
 
     @NotBlank
     private String opsi_sveso_postrojenja;
@@ -40,7 +40,7 @@ public class IzvestajBezbednostiIPlanZastiteOdUdesa {
 
     }
 
-    public IzvestajBezbednostiIPlanZastiteOdUdesa(String informacije_o_upravl_i_organizacije_u_cilju_sprecavanja_hemiskog_udara, int id_lokacije, String opsi_sveso_postrojenja, String analiza_razlika_od_hemiskog_udesa, String nacin_sprecavanje_hemiskog_udesa, String mere_koje_se_preuzimaju_u_okviru_sveso_postrojenja, int id_sveso_postrojenja, int datum_id_tip_sveso_postrojenja) {
+    public IzvestajBezbednostiIPlanZastiteOdUdesa(String informacije_o_upravl_i_organizacije_u_cilju_sprecavanja_hemiskog_udara, String id_lokacije, String opsi_sveso_postrojenja, String analiza_razlika_od_hemiskog_udesa, String nacin_sprecavanje_hemiskog_udesa, String mere_koje_se_preuzimaju_u_okviru_sveso_postrojenja, int id_sveso_postrojenja, int datum_id_tip_sveso_postrojenja) {
         this.informacije_o_upravl_i_organizacije_u_cilju_sprecavanja = informacije_o_upravl_i_organizacije_u_cilju_sprecavanja_hemiskog_udara;
         this.id_lokacije = id_lokacije;
         this.opsi_sveso_postrojenja = opsi_sveso_postrojenja;
@@ -67,11 +67,11 @@ public class IzvestajBezbednostiIPlanZastiteOdUdesa {
         this.informacije_o_upravl_i_organizacije_u_cilju_sprecavanja = informacije_o_upravl_i_organizacije_u_cilju_sprecavanja_hemiskog_udara;
     }
 
-    public int getId_lokacije() {
+    public String getId_lokacije() {
         return id_lokacije;
     }
 
-    public void setId_lokacije(int id_lokacije) {
+    public void setId_lokacije(String id_lokacije) {
         this.id_lokacije = id_lokacije;
     }
 

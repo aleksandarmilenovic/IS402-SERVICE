@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.persistence.GeneratedValue;
+import java.util.List;
 
 @RestController
 @RequestMapping("/saglasnost")
@@ -29,6 +30,10 @@ public class SaglasnostController {
         }
         return "Failed";
 
+    }
+    @GetMapping("/all")
+    public List<Saglasnosti> getAll(){
+        return  saglasnostRepository.findAll();
     }
 
 }

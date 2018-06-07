@@ -18,7 +18,7 @@ public class IzvestajBezbednostiIPlanZastiteOdUdesaController {
 
 
     @GetMapping("/add/{first}/{second}/{third}/{forth}/{fifth}/{sixth}/{seventh}/{eight}")
-    private String addNew(@PathVariable(value = "first")String first,@PathVariable(value = "second") int second,
+    private String addNew(@PathVariable(value = "first")String first,@PathVariable(value = "second") String second,
                           @PathVariable(value = "third")String third,@PathVariable(value = "forth")String forth,
                           @PathVariable(value = "fifth")String fifth,@PathVariable(value = "sixth")String sixth,
                           @PathVariable(value = "seventh") int seventh,@PathVariable(value = "eight") int eight){
